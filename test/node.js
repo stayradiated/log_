@@ -1,9 +1,7 @@
 'use strict';
 
-var expect, Log;
-
-expect = require('expect.js');
-Log    = require('./index');
+var expect = require('expect.js');
+var Log    = require('../index');
 
 describe('log_', function () {
 

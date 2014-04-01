@@ -1,6 +1,6 @@
 {
   "name": "log_",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "console.log in color and with custom prefixes",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/stayradiated/log_",
   "devDependencies": {
-    "mocha": "1.17.x",
-    "expect.js": "0.2.x"
+    "mocha": "^1.18.2",
+    "expect.js": "^0.3.1"
   }
 }

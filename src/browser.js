@@ -1,9 +1,7 @@
 (function () {
   'use strict';
 
-  var __slice = Array.prototype.slice;
-
-  var colors = {
+  var ansi = {
     'reset':      'colors: black',
     'bold':       'font-weight: bold',
     'italic':     'font-style: italic',
@@ -36,13 +34,13 @@
   var createLogger = function (name, color) {
 
     var prefix = '%c' + '[' + name + ']' + '%c';
-    var style = color ? colors[color] ? colors[color] : color : '';
+    var style = color ? ansi[color] ? ansi[color] : color : '';
 
     var log = function () {
       if (! enabled) return;
       var args = __slice.call(arguments, 0);
       var contents = serialize(args);
-      console.log(prefix + contents, style, colors.reset);
+      console.log(prefix + contents, style, ansi.reset);
     };
 
     log.warn = color === 'red' ? log : createLogger(name, 'red');
@@ -59,7 +57,7 @@
     enabled = false;
   };
 
-  createLogger.colors = colors;
+  createLogger.colors = ansi;
 
   if (typeof module !== 'undefined') {
     module.exports = createLogger;

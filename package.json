@@ -1,6 +1,6 @@
 {
   "name": "log_",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "console.log in color and with custom prefixes",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,6 @@
   "devDependencies": {
     "mocha": "^1.18.2",
     "expect.js": "^0.3.1"
-  }
+  },
+  "dependencies": {}
 }
